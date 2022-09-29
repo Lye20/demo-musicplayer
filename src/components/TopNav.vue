@@ -2,15 +2,15 @@
   <div class="top-nav">
     <div class="nav">
       <div class="nav-container">
-        <div class="nav-item" :class="{'active': nav.activeId==='1'}"><div class="text" @click="activeNav" navId="1">推荐</div></div>
-        <div class="nav-item" :class="{'active': nav.activeId==='2'}"><div class="text" @click="activeNav" navId="2">歌单</div></div>
+        <div class="nav-item" :class="{'active': active==='home'}" @click="activate('home')">推荐</div>
+        <div class="nav-item" :class="{'active': active==='new'}" @click="activate('new')">新曲</div>
       </div>
       <div class="user">
-        <span class="iconfont icon-xinfeng"></span>
+       <span class="iconfont icon-xinfeng"></span>
         <img src="@/assets/user-profile.jpg" alt="">
       </div>
     </div>
-    <div class="search">
+    <div class="search" @click="goto('search')">
       <span class="iconfont icon-fangdajing"></span>
       <span class="text">周杰伦</span>
     </div>
@@ -18,21 +18,26 @@
 </template>
 
 <script>
-  import {reactive} from "vue"
+  import { computed } from "vue"
+  import { useRoute, useRouter } from "vue-router"
   export default {
     name: "TopNav",
     setup(){
-      const nav = reactive({
-        activeId: "1"
+      const route = useRoute()
+      const router = useRouter()
+      const active = computed(()=>{
+        return route.name
       })
-      const activeNav = (event)=>{
-        const navId = event.target.getAttribute("navId")
-        console.log(event.target.getAttribute("navId"))
-        nav.activeId = navId
+      console.log(active)
+      const activate = name=>{
+        active.value = name
+        goto(name)
       }
+      const goto = name=>router.push({name})
       return {
-        nav,
-        activeNav
+        active,
+        activate,
+        goto
       }
     }
   }
@@ -41,38 +46,34 @@
 <style lang="less" scoped>
   .top-nav{
     position: fixed;
+    top: 0;
     width: 100%;
     min-width: 300px;
+    background-color: #fff;
+    z-index: 5;
     .nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
       height: 2rem;
-      margin: 0.325rem 0.9375rem;
+      margin: 0.7625rem 0.9375rem 0.125rem;
       .nav-container {
         .nav-item {
           position: relative;
           float: left;
+          width: 3rem;
           height: 2rem;
-          width: 3.5rem;
+          color: #666;
+          text-align: center;
+          line-height: 2rem;
+          padding: 0 0.625rem;
           margin-right: 0.625rem;
-          .text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 2.4rem;
-            height: 1.2rem;
-            line-height: 1.2rem;
-            text-align: center;
-            transition: all 0.1s;
-          }
           &.active {
-            color: #333;
+            color: #555;
             font-size: 1.2rem;
             font-weight: 700;
             &:after, &:before {
-              clip-path: inset(0)
+              clip-path: inset(0);
             }
           }
           &:after, &:before {
@@ -86,7 +87,7 @@
             height: 100%;
             border: 0.125rem solid gold;
             border-radius: 0.3125rem;
-            transition: clip-path 0.5s;
+            transition: clip-path 0.4s;
           }
           &:after {
             clip-path: inset(1.1rem 0 0 2rem);
@@ -115,8 +116,8 @@
       width: 95%;
       border-radius: 0.5rem;
       padding: 0.3125rem 0;
-      background-color: #ddd;
-      margin: 0.5125rem auto;
+      background-color: #e3e3e3;
+      margin: 0.5125rem auto 0.3rem;
       .iconfont {
         padding-left: 0.625rem;
         padding-right: 0.4375rem;

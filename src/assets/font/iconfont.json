@@ -6,39 +6,123 @@
   "description": "",
   "glyphs": [
     {
-      "icon_id": "18939003",
-      "name": "播放中",
-      "font_class": "bofangzhong",
-      "unicode": "e68f",
-      "unicode_decimal": 59023
+      "icon_id": "32098211",
+      "name": "删除2-copy",
+      "font_class": "shanchu1-copy",
+      "unicode": "eb7c",
+      "unicode_decimal": 60284
     },
     {
-      "icon_id": "18939006",
-      "name": "暂停",
-      "font_class": "zanting",
-      "unicode": "e691",
-      "unicode_decimal": 59025
+      "icon_id": "82754",
+      "name": "删除2",
+      "font_class": "shanchu2",
+      "unicode": "e600",
+      "unicode_decimal": 58880
     },
     {
-      "icon_id": "18939007",
-      "name": "上一曲",
-      "font_class": "shangyiqu",
-      "unicode": "e692",
-      "unicode_decimal": 59026
+      "icon_id": "5387878",
+      "name": "历史记录_o",
+      "font_class": "lishijilu_o",
+      "unicode": "eb7b",
+      "unicode_decimal": 60283
     },
     {
-      "icon_id": "18939008",
-      "name": "下一曲",
-      "font_class": "xiayiqu",
-      "unicode": "e693",
-      "unicode_decimal": 59027
+      "icon_id": "993671",
+      "name": "后退",
+      "font_class": "houtui1",
+      "unicode": "e604",
+      "unicode_decimal": 58884
     },
     {
-      "icon_id": "18958846",
-      "name": "播放列表",
-      "font_class": "bofangliebiao",
-      "unicode": "e696",
-      "unicode_decimal": 59030
+      "icon_id": "1278305",
+      "name": "bofang",
+      "font_class": "bofang1",
+      "unicode": "e617",
+      "unicode_decimal": 58903
+    },
+    {
+      "icon_id": "12036444",
+      "name": "上一首",
+      "font_class": "shangyishou",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    },
+    {
+      "icon_id": "12036446",
+      "name": "播放",
+      "font_class": "bofang",
+      "unicode": "e60e",
+      "unicode_decimal": 58894
+    },
+    {
+      "icon_id": "12036447",
+      "name": "停止",
+      "font_class": "tingzhi",
+      "unicode": "e60f",
+      "unicode_decimal": 58895
+    },
+    {
+      "icon_id": "12036449",
+      "name": "下一首",
+      "font_class": "xiayishou",
+      "unicode": "e610",
+      "unicode_decimal": 58896
+    },
+    {
+      "icon_id": "12036460",
+      "name": "音频列表",
+      "font_class": "yinpinliebiao",
+      "unicode": "e611",
+      "unicode_decimal": 58897
+    },
+    {
+      "icon_id": "5203254",
+      "name": "后退",
+      "font_class": "houtui",
+      "unicode": "e624",
+      "unicode_decimal": 58916
+    },
+    {
+      "icon_id": "7592554",
+      "name": "24gl-headphones",
+      "font_class": "gl-headphones",
+      "unicode": "ea09",
+      "unicode_decimal": 59913
+    },
+    {
+      "icon_id": "31842393",
+      "name": "笔_icon",
+      "font_class": "bi_icon",
+      "unicode": "e69b",
+      "unicode_decimal": 59035
+    },
+    {
+      "icon_id": "31842398",
+      "name": "麦克风_icon",
+      "font_class": "maikefeng_icon",
+      "unicode": "e69c",
+      "unicode_decimal": 59036
+    },
+    {
+      "icon_id": "31842435",
+      "name": "发现_icon",
+      "font_class": "faxian_icon",
+      "unicode": "e69d",
+      "unicode_decimal": 59037
+    },
+    {
+      "icon_id": "31842437",
+      "name": "耳机_icon",
+      "font_class": "erji_icon",
+      "unicode": "e69e",
+      "unicode_decimal": 59038
+    },
+    {
+      "icon_id": "31842458",
+      "name": "衣柜_icon",
+      "font_class": "yigui_icon",
+      "unicode": "e69f",
+      "unicode_decimal": 59039
     },
     {
       "icon_id": "26847616",

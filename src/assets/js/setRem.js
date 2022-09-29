@@ -1,6 +1,6 @@
 const setRem = ()=>{
   const baseSize = 16
-  const deviceWidth = window.screen.width || document.documentElement.clientWidth || 375
+  const deviceWidth = document.documentElement.clientWidth || window.screen.width || 375
   const width = deviceWidth < 300 ? 300 : deviceWidth
   const scale = Math.min(width/375, 2)
   document.documentElement.style.width = width + "px"
