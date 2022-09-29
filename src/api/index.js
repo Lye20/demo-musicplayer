@@ -44,6 +44,25 @@ export const requestHotSearch = ()=>{
     methods: "GET"
   })
 }
+
+export const requestSearchSuggestion = (keywords)=>{
+  return request({
+    url: "/search/suggest",
+    methods: "GET",
+    params: {
+      keywords,
+      type: "mobile"
+    }
+  })
+}
+
+export const requestSearchResult = (keywords, limit, offset)=>{
+  return request({
+    url: "/search",
+    methods: "GET",
+    params: {keywords, limit, offset}
+  })
+}
 // export const checkSong = (id)=>{
 //   return request({
 //     url: "/check/music",

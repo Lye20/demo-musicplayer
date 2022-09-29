@@ -28,7 +28,6 @@
       const active = computed(()=>{
         return route.name
       })
-      console.log(active)
       const activate = name=>{
         active.value = name
         goto(name)
